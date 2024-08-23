@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "534694204889",
+    "project_id": "weedwhiz-fef97",
+    "storage_bucket": "weedwhiz-fef97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534694204889:android:ab8df086d1185605d835c8",
+        "android_client_info": {
+          "package_name": "com.ntech.weedwhiz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1uPjTFAy0OdKnbb6xiQe0VtscXH0v7-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
