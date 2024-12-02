@@ -6,6 +6,7 @@ import com.ntech.theyardhub.feature.auth.MonitoringViewModel
 import com.ntech.weedwhiz.feature.auth.LoginViewModel
 import com.ntech.weedwhiz.datalayer.di.AuthenticationModule
 import com.ntech.weedwhiz.datalayer.di.ConfigModule
+import com.ntech.weedwhiz.datalayer.di.DetectionModule
 import com.ntech.weedwhiz.datalayer.di.HistoryModule
 import com.ntech.weedwhiz.datalayer.di.MonitoringModule
 import com.ntech.weedwhiz.datalayer.implementation.repository.AuthenticationRepositoryImpl
@@ -38,6 +39,10 @@ val appModule = module {
     // Config Collection
     single(named("MONITORING")) { MonitoringModule.provideMonitoringRef() }
     single { MonitoringModule.provideMonitoringRepository(get(named("MONITORING")), get()) }
+
+    // Detection Collection
+    single(named("DETECTION")) { DetectionModule.provideDetectionRef() }
+    single { DetectionModule.provideDetectionRepository(get(named("DETECTION")), get()) }
 
     // Repository
     single { AuthenticationRepositoryImpl(get(), get()) }

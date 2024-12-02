@@ -50,7 +50,7 @@ fun HomeScreen(navController: NavController) {
                             modifier = Modifier.size(24.dp)
                         )
                         Text(
-                            "YardHub",
+                            "WeedWhiz",
                             modifier = Modifier.padding(start = 8.dp),
                             style = Typography.titleMedium.copy(fontWeight = FontWeight.ExtraBold)
                         )

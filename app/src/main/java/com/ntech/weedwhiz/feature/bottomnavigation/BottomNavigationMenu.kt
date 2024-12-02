@@ -36,9 +36,9 @@ fun BottomNavigationMenu(
 ) {
     val items = ArrayList<BottomNavItem>()
 
-    items.add(BottomNavItem.Home)
+    items.add(BottomNavItem.Detection)
     items.add(BottomNavItem.Monitoring)
-    items.add(BottomNavItem.Setting)
+    items.add(BottomNavItem.History)
 
     NavigationBar(
         containerColor = bottomNavigationColor,
@@ -49,7 +49,8 @@ fun BottomNavigationMenu(
             .graphicsLayer {
                 shape = RoundedCornerShape(32.dp)
                 clip = true
-            }.background(Color.Transparent)
+            }
+            .background(Color.Transparent)
     ) {
         items.forEach { item ->
             AddItem(

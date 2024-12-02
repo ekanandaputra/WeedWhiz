@@ -99,7 +99,7 @@ class MainActivity : ComponentActivity() {
                                 .fillMaxHeight(),
                             contentAlignment = Alignment.BottomCenter
                         ) {
-                            if (currentRoute != SPLASH_SCREEN) {
+                            if (currentRoute != SPLASH_SCREEN && currentRoute != LOGIN_SCREEN) {
                                 BottomNavigationMenu(
                                     navController = navController,
                                     selectedMenuState = viewModel.selectedMenuState.value,
