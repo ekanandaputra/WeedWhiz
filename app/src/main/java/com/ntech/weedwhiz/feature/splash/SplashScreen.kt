@@ -20,6 +20,7 @@ import com.ntech.weedwhiz.R
 import com.ntech.weedwhiz.core.RouteName.DETECTION_SCREEN
 import com.ntech.weedwhiz.core.RouteName.HISTORY_SCREEN
 import com.ntech.weedwhiz.core.RouteName.HOME_SCREEN
+import com.ntech.weedwhiz.core.RouteName.LOGIN_SCREEN
 import com.ntech.weedwhiz.core.RouteName.SPLASH_SCREEN
 import com.ntech.weedwhiz.core.theme.Typography
 import com.ntech.weedwhiz.core.theme.White
@@ -34,7 +35,7 @@ fun SplashScreen(navController: NavController) {
 
     LaunchedEffect(key1 = true) {
         delay(3000L)
-        navController.navigate(DETECTION_SCREEN) {
+        navController.navigate(LOGIN_SCREEN) {
             popUpTo(SPLASH_SCREEN) {
                 inclusive = true
             }

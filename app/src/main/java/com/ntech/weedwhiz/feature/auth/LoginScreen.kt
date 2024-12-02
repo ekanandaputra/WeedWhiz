@@ -1,5 +1,6 @@
 package com.ntech.weedwhiz.feature.auth
 
+import android.annotation.SuppressLint
 import android.widget.Toast
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -19,6 +20,7 @@ import androidx.navigation.NavController
 import com.ntech.weedwhiz.core.ButtonHeight
 import com.ntech.weedwhiz.core.ButtonType
 import com.ntech.weedwhiz.core.RouteName.CONFIG_SCREEN
+import com.ntech.weedwhiz.core.RouteName.DETECTION_SCREEN
 import com.ntech.weedwhiz.core.component.GeneralButton
 import com.ntech.weedwhiz.core.component.LoadingDialog
 import com.ntech.weedwhiz.core.component.RoundedEditField
@@ -28,6 +30,7 @@ import com.ntech.weedwhiz.core.utils.AppResponse
 import kotlinx.coroutines.launch
 import org.koin.androidx.compose.get
 
+@SuppressLint("UnrememberedMutableState")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LoginScreen(navController: NavController) {
@@ -59,7 +62,7 @@ fun LoginScreen(navController: NavController) {
 
         is AppResponse.Success -> {
             showDialog.value = false
-            navController.navigate(CONFIG_SCREEN)
+            navController.navigate(DETECTION_SCREEN)
         }
 
         else -> {

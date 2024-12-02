@@ -18,7 +18,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.Black
-import androidx.compose.ui.graphics.Color.Companion.Blue
 import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.input.TextFieldValue
@@ -27,6 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.ntech.weedwhiz.core.theme.Gray
+import com.ntech.weedwhiz.core.theme.GreenHaze
 import com.ntech.weedwhiz.core.theme.Typography
 import com.ntech.weedwhiz.core.theme.White
 
@@ -38,7 +38,7 @@ fun RoundedEditField(
     value: TextFieldValue,
     onValueChange: (TextFieldValue) -> Unit,
     cornerRadius: Dp = 15.dp,
-    textColor: Color = Blue,
+    textColor: Color = GreenHaze,
     hint: String,
     isReadOnly: Boolean = false,
     onClickField: () -> Unit = {},

@@ -64,18 +64,18 @@ fun MonitoringScreen(navController: NavController) {
         topBar = {
             TopAppBar(
                 title = {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
-                    ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
                         Text(
-                            "Monitoring", style = Typography.titleMedium.copy(
-                                fontWeight = FontWeight.ExtraBold, color = White
+                            "Monitoring",
+                            modifier = Modifier.padding(start = 8.dp),
+                            style = Typography.titleMedium.copy(
+                                fontWeight = FontWeight.ExtraBold,
+                                color = White
                             )
                         )
                     }
-                }, colors = TopAppBarDefaults.smallTopAppBarColors(
+                },
+                colors = TopAppBarDefaults.smallTopAppBarColors(
                     containerColor = colorPrimary
                 )
             )

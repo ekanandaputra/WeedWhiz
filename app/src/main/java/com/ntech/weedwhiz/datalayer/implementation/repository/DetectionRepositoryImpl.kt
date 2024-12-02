@@ -2,6 +2,7 @@ package com.ntech.weedwhiz.datalayer.implementation.repository
 
 import com.google.firebase.Timestamp
 import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.Query
 import com.ntech.weedwhiz.core.utils.AppResponse
 import com.ntech.weedwhiz.core.utils.DataStorage
 import com.ntech.weedwhiz.datalayer.model.DetectionModel
@@ -21,7 +22,10 @@ class DetectionRepositoryImpl(
     override suspend fun getDetections(): AppResponse<List<DetectionModel>> {
         return withContext(Dispatchers.IO) {
             try {
-                val querySnapshot = detectionRef.get().await()
+                val querySnapshot = detectionRef
+                    .orderBy("detection_at", Query.Direction.ASCENDING)
+                    .get()
+                    .await()
                 if (querySnapshot.isEmpty) {
                     return@withContext AppResponse.Empty
                 } else {

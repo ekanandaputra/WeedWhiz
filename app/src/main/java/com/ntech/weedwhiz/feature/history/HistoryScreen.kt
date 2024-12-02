@@ -75,7 +75,7 @@ fun HistoryScreen(navController: NavController) {
                         Text(
                             "WeedWhiz",
                             modifier = Modifier.padding(start = 8.dp),
-                            style = Typography.titleMedium.copy(fontWeight = FontWeight.ExtraBold)
+                            style = Typography.titleMedium.copy(fontWeight = FontWeight.ExtraBold, color = White)
                         )
                     }
                 },

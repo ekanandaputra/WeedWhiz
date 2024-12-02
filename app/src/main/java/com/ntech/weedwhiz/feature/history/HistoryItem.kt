@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import com.ntech.weedwhiz.core.theme.Typography
 import com.ntech.weedwhiz.core.theme.White
 import com.ntech.weedwhiz.core.theme.colorPrimary
+import com.ntech.weedwhiz.core.utils.formatFirebaseTimestampToDate
 import com.ntech.weedwhiz.datalayer.model.HistoryModel
 
 @Composable
@@ -40,7 +41,7 @@ fun HistoryItem(historyModel: HistoryModel) {
                 contentAlignment = Alignment.CenterEnd
             ) {
                 Text(
-                    text = "10 April 2023, 03:45",
+                    text = formatFirebaseTimestampToDate(historyModel.dateTime),
                     modifier = Modifier.padding(10.dp),
                     style = Typography.titleSmall.copy(
                         fontWeight = FontWeight.ExtraBold,
@@ -50,9 +51,15 @@ fun HistoryItem(historyModel: HistoryModel) {
             }
         }
         Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = "Durasi: 10 Detik", style = Typography.titleMedium)
+            Text(
+                text = "Durasi: " + historyModel.duration + " Detik",
+                style = Typography.titleMedium
+            )
             Spacer(modifier = Modifier.height(16.dp))
-            Text(text = "Volume Tangki Saat Ini: 100 ml", style = Typography.titleMedium)
+            Text(
+                text = "Volume Tangki Saat Ini: " + historyModel.tankVolume + " mL",
+                style = Typography.titleMedium
+            )
         }
     }
 }
