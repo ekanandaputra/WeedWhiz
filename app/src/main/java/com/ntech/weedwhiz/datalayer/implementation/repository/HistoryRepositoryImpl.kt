@@ -23,7 +23,6 @@ class HistoryRepositoryImpl(
     private val dataStorage: DataStorage
 ) : HistoryRepository {
 
-
     private fun convertToInt(anyValue: Any): Int? {
         return when (anyValue) {
             is Int -> anyValue
@@ -32,7 +31,7 @@ class HistoryRepositoryImpl(
         }
     }
 
-    fun timestampToString(timestamp: Timestamp): String {
+    private fun timestampToString(timestamp: Timestamp): String {
         val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
         val date = timestamp.toDate()
         return dateFormat.format(date)

@@ -9,5 +9,6 @@ object RouteName {
     const val HISTORY_SCREEN = "history-screen"
     const val SPLASH_SCREEN = "splash-screen"
     const val MONITORING_SCREEN = "monitoring-screen"
+    const val DETECTION_SCREEN = "detection-screen"
 }
 

@@ -26,6 +26,7 @@ import androidx.navigation.compose.rememberNavController
 import com.ntech.theyardhub.feature.auth.ConfigViewModel
 import com.ntech.weedwhiz.core.RouteName
 import com.ntech.weedwhiz.core.RouteName.CONFIG_SCREEN
+import com.ntech.weedwhiz.core.RouteName.DETECTION_SCREEN
 import com.ntech.weedwhiz.core.RouteName.HISTORY_SCREEN
 import com.ntech.weedwhiz.core.RouteName.HOME_SCREEN
 import com.ntech.weedwhiz.core.RouteName.LOGIN_SCREEN
@@ -37,6 +38,7 @@ import com.ntech.weedwhiz.feature.auth.LoginScreen
 import com.ntech.weedwhiz.feature.bottomnavigation.BottomNavItem
 import com.ntech.weedwhiz.feature.bottomnavigation.BottomNavigationMenu
 import com.ntech.weedwhiz.feature.config.ConfigScreen
+import com.ntech.weedwhiz.feature.detection.DetectionScreen
 import com.ntech.weedwhiz.feature.history.HistoryScreen
 import com.ntech.weedwhiz.feature.home.HomeScreen
 import com.ntech.weedwhiz.feature.monitoring.MonitoringScreen
@@ -90,6 +92,9 @@ class MainActivity : ComponentActivity() {
                                 }
                                 composable(MONITORING_SCREEN) {
                                     MonitoringScreen(navController)
+                                }
+                                composable(DETECTION_SCREEN) {
+                                    DetectionScreen(navController)
                                 }
                             }
                         }

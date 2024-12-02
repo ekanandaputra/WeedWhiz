@@ -1,7 +1,8 @@
 package com.ntech.weedwhiz.di
 
 import com.ntech.theyardhub.feature.auth.ConfigViewModel
-import com.ntech.theyardhub.feature.auth.HistoryViewModel
+import com.ntech.weedwhiz.feature.detection.DetectionViewModel
+import com.ntech.weedwhiz.feature.history.HistoryViewModel
 import com.ntech.theyardhub.feature.auth.MonitoringViewModel
 import com.ntech.weedwhiz.feature.auth.LoginViewModel
 import com.ntech.weedwhiz.datalayer.di.AuthenticationModule
@@ -11,6 +12,7 @@ import com.ntech.weedwhiz.datalayer.di.HistoryModule
 import com.ntech.weedwhiz.datalayer.di.MonitoringModule
 import com.ntech.weedwhiz.datalayer.implementation.repository.AuthenticationRepositoryImpl
 import com.ntech.weedwhiz.datalayer.implementation.repository.ConfigRepositoryImpl
+import com.ntech.weedwhiz.datalayer.implementation.repository.DetectionRepositoryImpl
 import com.ntech.weedwhiz.datalayer.implementation.repository.HistoryRepositoryImpl
 import com.ntech.weedwhiz.datalayer.implementation.repository.MonitoringRepositoryImpl
 import com.ntech.weedwhiz.feature.main.MainActivityViewModel
@@ -49,6 +51,7 @@ val appModule = module {
     single { ConfigRepositoryImpl(get(), get()) }
     single { HistoryRepositoryImpl(get(), get()) }
     single { MonitoringRepositoryImpl(get(), get()) }
+    single { DetectionRepositoryImpl(get(), get()) }
 
     // View Model
     factory { LoginViewModel(get()) }
@@ -56,5 +59,6 @@ val appModule = module {
     factory { HistoryViewModel(get()) }
     factory { MonitoringViewModel(get()) }
     factory { MainActivityViewModel() }
+    factory { DetectionViewModel(get()) }
 
 }

@@ -1,4 +1,4 @@
-package com.ntech.weedwhiz.feature.history
+package com.ntech.weedwhiz.feature.detection
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
@@ -25,28 +25,28 @@ import com.ntech.weedwhiz.core.theme.Typography
 import com.ntech.weedwhiz.core.theme.White
 import com.ntech.weedwhiz.core.theme.colorPrimary
 import com.ntech.weedwhiz.core.utils.AppResponse
-import com.ntech.weedwhiz.datalayer.model.HistoryModel
+import com.ntech.weedwhiz.datalayer.model.DetectionModel
 import org.koin.androidx.compose.get
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HistoryScreen(navController: NavController) {
+fun DetectionScreen(navController: NavController) {
 
     val coroutineScope = rememberCoroutineScope()
-    val viewModel: HistoryViewModel = get()
+    val viewModel: DetectionViewModel = get()
     val mContext = LocalContext.current
-    var itemsList = arrayListOf<HistoryModel>()
+    var itemsList = arrayListOf<DetectionModel>()
 
     LaunchedEffect(key1 = true) {
-        viewModel.fetchHistory()
+        viewModel.fetchDetections()
     }
 
-    val historyState = viewModel.historyLiveData.observeAsState().value
+    val detectionState = viewModel.detectionLiveData.observeAsState().value
 
     val showDialog = remember { mutableStateOf(false) }
 
-    when (historyState) {
+    when (detectionState) {
         is AppResponse.Loading -> {
             showDialog.value = true
         }
@@ -57,7 +57,7 @@ fun HistoryScreen(navController: NavController) {
 
         is AppResponse.Success -> {
             showDialog.value = false
-            itemsList = historyState.data as ArrayList<HistoryModel>
+            itemsList = detectionState.data as ArrayList<DetectionModel>
         }
 
         else -> {
@@ -101,7 +101,7 @@ fun HistoryScreen(navController: NavController) {
                 verticalArrangement = Arrangement.spacedBy(20.dp)
             ) {
                 items(itemsList.size) { index ->
-                    HistoryItem(historyModel = itemsList[index])
+                    DetectionItem(data = itemsList[index])
                 }
             }
         }

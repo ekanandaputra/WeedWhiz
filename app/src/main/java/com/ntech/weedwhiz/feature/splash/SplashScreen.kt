@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.ntech.weedwhiz.R
+import com.ntech.weedwhiz.core.RouteName.DETECTION_SCREEN
 import com.ntech.weedwhiz.core.RouteName.HISTORY_SCREEN
 import com.ntech.weedwhiz.core.RouteName.HOME_SCREEN
 import com.ntech.weedwhiz.core.RouteName.SPLASH_SCREEN
@@ -33,7 +34,7 @@ fun SplashScreen(navController: NavController) {
 
     LaunchedEffect(key1 = true) {
         delay(3000L)
-        navController.navigate(HISTORY_SCREEN) {
+        navController.navigate(DETECTION_SCREEN) {
             popUpTo(SPLASH_SCREEN) {
                 inclusive = true
             }
