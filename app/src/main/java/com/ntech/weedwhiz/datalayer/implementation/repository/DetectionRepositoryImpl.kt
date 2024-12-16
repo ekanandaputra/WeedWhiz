@@ -23,7 +23,7 @@ class DetectionRepositoryImpl(
         return withContext(Dispatchers.IO) {
             try {
                 val querySnapshot = detectionRef
-                    .orderBy("detection_at", Query.Direction.ASCENDING)
+                    .orderBy("detection_at", Query.Direction.DESCENDING)
                     .get()
                     .await()
                 if (querySnapshot.isEmpty) {

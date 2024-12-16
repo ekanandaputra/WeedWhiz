@@ -20,7 +20,7 @@ class HistoryRepositoryImpl(
         return withContext(Dispatchers.IO) {
             try {
                 val querySnapshot = historyRef
-                    .orderBy("date_time", Query.Direction.ASCENDING)
+                    .orderBy("date_time", Query.Direction.DESCENDING)
                     .get()
                     .await()
                 if (querySnapshot.isEmpty) {

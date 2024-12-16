@@ -15,7 +15,7 @@ import com.ntech.weedwhiz.datalayer.repository.MonitoringRepository
 
 object DetectionModule {
     fun provideDetectionRef(): CollectionReference {
-        return Firebase.firestore.collection("detections")
+        return Firebase.firestore.collection("detection")
     }
 
     fun provideDetectionRepository(

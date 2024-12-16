@@ -1,26 +1,66 @@
 {
   "project_info": {
-    "project_number": "534694204889",
-    "project_id": "weedwhiz-fef97",
-    "storage_bucket": "weedwhiz-fef97.appspot.com"
+    "project_number": "450853176872",
+    "firebase_url": "https://weeds-detection-default-rtdb.firebaseio.com",
+    "project_id": "weeds-detection",
+    "storage_bucket": "weeds-detection.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:534694204889:android:ab8df086d1185605d835c8",
+        "mobilesdk_app_id": "1:450853176872:android:d04b134671b3f73f80971d",
         "android_client_info": {
-          "package_name": "com.ntech.weedwhiz"
+          "package_name": "com.ntech.weedsdetection"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "450853176872-6gi6spqms14h5ah1n4c77e3ngp8j8ura.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyA1uPjTFAy0OdKnbb6xiQe0VtscXH0v7-U"
+          "current_key": "AIzaSyArIn4UpNyNAe5lUAsYZD6XD9IONlfUfRE"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "450853176872-6gi6spqms14h5ah1n4c77e3ngp8j8ura.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450853176872:android:2ff41f043adb7e9380971d",
+        "android_client_info": {
+          "package_name": "com.ntech.weedwhiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450853176872-6gi6spqms14h5ah1n4c77e3ngp8j8ura.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArIn4UpNyNAe5lUAsYZD6XD9IONlfUfRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "450853176872-6gi6spqms14h5ah1n4c77e3ngp8j8ura.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

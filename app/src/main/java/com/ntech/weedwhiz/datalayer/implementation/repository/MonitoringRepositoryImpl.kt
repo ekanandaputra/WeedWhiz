@@ -34,9 +34,9 @@ class MonitoringRepositoryImpl(
 
             if (snapshot != null && !snapshot.isEmpty) {
                 val document = snapshot.documents[0]
-                val tankVolume = document.get("waterLevel") ?: Any()
+                val tankVolume: Long = document.getLong("water_level") ?: 0
                 Log.d("TAG", "observeWaterLevelChanges: " + tankVolume)
-                _waterLevelFlow.tryEmit(AppResponse.Success(convertToInt(tankVolume) ?: 0))
+                _waterLevelFlow.tryEmit(AppResponse.Success(tankVolume.toInt()))
             } else {
                 _waterLevelFlow.tryEmit(AppResponse.Error("No documents found"))
             }

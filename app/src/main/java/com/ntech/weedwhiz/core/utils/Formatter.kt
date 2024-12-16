@@ -34,7 +34,7 @@ fun formatFirebaseTimestampToDate(timestamp: Timestamp): String {
     // Convert Timestamp to Date
     val date = timestamp.toDate()
     // Define the desired format
-    val sdf = SimpleDateFormat("dd MMM yyyy, HH:mm", Locale.getDefault())
+    val sdf = SimpleDateFormat("dd MMM yyyy, HH:mm:ss", Locale.getDefault())
     // Format the date
     return sdf.format(date)
 }
